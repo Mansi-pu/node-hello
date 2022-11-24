@@ -13,21 +13,10 @@ pipeline {
         sh 'node -v'
       }
     }
-    stage('Install dependencies') {
-      steps {
-        sh 'npm install'
-        sh 'npm -v'
-      }
-    } 
-    stage('Install Express') {
-      steps {
-        echo 'cd node-hello'
-        sh 'npm i express'
-      }
-    } 
     stage('Run Application') {
       steps {
         echo 'cd node-hello'
+        sh 'npm i express && npm i'
         sh 'npm start'
       }
     }     
