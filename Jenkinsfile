@@ -17,6 +17,7 @@ pipeline {
       steps {
         echo 'cd node-hello'
         sh 'npm i'
+        sh 'ls'
         sh 'npm start'
       }
     }     
