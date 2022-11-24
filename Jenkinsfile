@@ -1,11 +1,11 @@
 pipeline {
   agent any
   stages {
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/Mansi-pu/node-hello.git'
-      }
-    } 
+     stage('Git Checkout') {
+       steps {
+         git branch: 'main', credentialsId: 'git-credentials', url: 'https://github.com/Mansi-pu/node-hello'
+       }
+    }
     stage('Install Tool') {
       steps {
         sh 'sudo apt install nodejs'
