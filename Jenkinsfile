@@ -21,6 +21,7 @@ pipeline {
     } 
     stage('Initialize the application') {
       steps {
+        echo 'cd node-hello'
         sh 'npm init -y'
       }
     }  
@@ -32,6 +33,7 @@ pipeline {
     } 
     stage('Run Application') {
       steps {
+        echo 'cd node-hello'
         sh 'npm start'
       }
     }     
