@@ -1,6 +1,12 @@
 pipeline {
   agent any
   stages {
+    stage('Clean Workspace') {
+      steps {
+        // Clean before build
+        cleanWs disableDeferredWipeout: true, deleteDirs: true
+        }
+    }
     stage('Install Tool') {
       steps {
         sh 'sudo apt install nodejs'
@@ -11,12 +17,6 @@ pipeline {
       steps {
         sh 'npm install'
         sh 'npm -v'
-      }
-    }
-     
-    stage('Cloning Git') {
-      steps {
-        git 'https://github.com/Mansi-pu/node-hello.git'
       }
     } 
     stage('Install Express') {
