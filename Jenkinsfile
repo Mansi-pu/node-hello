@@ -7,9 +7,9 @@ pipeline {
         cleanWs disableDeferredWipeout: true, deleteDirs: true
         }
     }
-     stage('Cloning Git') {
-       steps {
-         git 'https://github.com/Mansi-pu/node-hello.git'
+    stage('Cloning Git') {
+      steps {
+        git 'https://github.com/Mansi-pu/node-hello.git'
       }
     } 
     stage('Install Tool') {
