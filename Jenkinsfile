@@ -19,12 +19,6 @@ pipeline {
         git 'https://github.com/Mansi-pu/node-hello.git'
       }
     } 
-    stage('Initialize the application') {
-      steps {
-        echo 'cd node-hello'
-        sh 'npm init -y'
-      }
-    }  
     stage('Install Express') {
       steps {
         echo 'cd node-hello'
