@@ -16,7 +16,7 @@ pipeline {
     stage('Run Application') {
       steps {
         echo 'cd node-hello'
-        sh 'npm i express && npm i'
+        sh 'npm i'
         sh 'npm start'
       }
     }     
