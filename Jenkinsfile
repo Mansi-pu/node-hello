@@ -26,6 +26,7 @@ pipeline {
     }  
     stage('Install Express') {
       steps {
+        echo 'cd node-hello'
         sh 'npm i express'
       }
     } 
